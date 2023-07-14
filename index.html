@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<meta http-equiv="AM-Template" content="standard/html/login_auth.html">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+
+<title>Active! mail</title>
+
+<script type="text/javascript">
+<!--
+var amConfig={modules:"Vpop"};if(!window.parent||window.parent.closed||!window.parent.amtop){amConfig.data={url:{js:"https://pam.alpha-mail.ne.jp/am_viz/common/js/",resource:"https://pam.alpha-mail.ne.jp/am_viz/ja/"},gen:{BUILDID:"6.5801008070"},sys:{BROWSER_TITLE:"Active! mail"}};}
+//-->
+</script>
+<script type="text/javascript" src="https://pam.alpha-mail.ne.jp/am_viz/common/js/prototype.js?6.5801008070"></script>
+<script type="text/javascript" src="https://pam.alpha-mail.ne.jp/am_viz/common/js/activemail.js?6.5801008070"></script>
+
+
+<link rel="stylesheet" type="text/css" href="https://pam.alpha-mail.ne.jp/am_viz/common/standard/popup.css?6.5801008070" />
+<link rel="stylesheet" type="text/css" href="https://pam.alpha-mail.ne.jp/am_viz/common/standard/index/index_ch100.css?6.5801008070">
+<style type="text/css">
+  body {
+    background-image : none !important;
+  }
+</style>
+</head>
+<body topmargin="0" leftmargin="0" text="#000000" bgcolor="#FFFFFF">
+<div id="chpasswd_response" style="display: none;"></div>
+</body>
+
+
+<script type="text/javascript">
+<!--
+var auth_status='0';var password_status='0';var session_status='0';var quota_status='0';var is_allmap='';check_quota=0;function error_back(){var url='/am_viz/logoff.html';if(Boolean(url)){self.location.href=url;}else{self.location.href="https://pam.alpha-mail.ne.jp/am_bin/amlogin";}
+return;}
+function move_home(){if(check_quota==1){self.location.href="https://pam.alpha-mail.ne.jp/am_bin/ammain/top?id=27518_7680770";}}
+function move_page_after_login()
+{self.location.href="https://pam.alpha-mail.ne.jp/am_bin/ammain/top?id=27518_7680770";}
+function displayChpasswdInit(){try{document.forms.form_chpasswd.current_passwd.focus();}catch(e){}}
+function displayChangePassword(lastupdate,expiration_date,password_lifetime,passwd_policy,passwd_policy_rule,passwd_policy_limit,passwd_policy_contain,passwd_policy_length,mobile_passwd){var html=passwordChangeFormSource.interpolate({BRIEF:"繝代せ繝ｯ繝ｼ繝峨�譛牙柑譛滄剞繧定ｶ�℃縺励※縺�∪縺吶�<br>譁ｰ縺励＞繝代せ繝ｯ繝ｼ繝峨↓螟画峩縺励※縺上□縺輔＞縲�",CAPTION:"譁ｰ縺励＞繝代せ繝ｯ繝ｼ繝�<br>(遒ｺ隱咲畑)",DISPLAY:(mobile_passwd)?"block":"none",LASTUPDATE:lastupdate,EXPIRATION_DATE:expiration_date,LIFETIME:password_lifetime,PASSWD_POLICY:passwd_policy,PASSWD_POLICY_RULE:passwd_policy_rule,PASSWD_POLICY_LIMIT:passwd_policy_limit,PASSWD_POLICY_CONTAIN:passwd_policy_contain,PASSWD_POLICY_LENGTH:passwd_policy_length});amvpop.openModalWindow(html,"繝代せ繝ｯ繝ｼ繝牙､画峩",500,(mobile_passwd)?400:360);displayChpasswdInit();}
+function successChangePasswd(XMLHttpRequest,Object){if(password_status=='1'){amvpop.closeWindow();}}
+function failureChangePasswd(XMLHttpRequest,Object){}
+function changePassword()
+{amvpop.lock();var f1=document.forms['form_chpasswd'];if(f1.current_passwd.value==''){ammsg.error('LOGIN0140');return;}
+if(f1.new_password.value==''){ammsg.error('LOGIN0160');return;}
+if(f1.check_password.value==''){ammsg.error('LOGIN0170');return;}
+if(f1.new_password.value!=f1.check_password.value){ammsg.error('LOGIN0180');return;}
+f1.login_page_lang.value="ja";f1.charset.value="UTF-8";f1.http_user_agent.value="";f1.am_authid.value="c_pham@wisenet.co.jp";f1.language.value="auto";f1.am_authpasswd.value=f1.current_passwd.value;var options={method:"post",onSuccess:successChangePasswd,onFailure:failureChangePasswd,evalScripts:true};new Ajax.FormUpdater('chpasswd_response',f1,options)}
+function cancelChangePassword(){error_back();}
+var passwordChangeFormSource="\n\x3cform name=\"form_chpasswd\" id=\"form_chpasswd\" method=\"POST\" action=\"https://pam.alpha-mail.ne.jp/am_bin/amlogin/login_auth_chpasswd\" onsubmit=\"return false;\"\x3e\n  \x3cinput type=\"hidden\" name=\"login_page_lang\" value=\"\"\x3e\n  \x3cinput type=\"hidden\" name=\"charset\" value=\"\"\x3e\n  \x3cinput type=\"hidden\" name=\"http_user_agent\" value=\"\"\x3e\n  \x3cinput type=\"hidden\" name=\"am_authid\" value=\"\"\x3e\n  \x3cinput type=\"hidden\" name=\"am_authpasswd\" value=\"\"\x3e\n\n  \x3cinput type=\"hidden\" name=\"language\" value=\"\"\x3e\n  \x3cinput type=\"hidden\" name=\"save_authinfo\" value=\"\"\x3e\n\n  \x3cdiv class=\"chpassword\"\x3e\n\n    \x3ctable\x3e\n\n      \x3ctr\x3e\n        \x3ctd\x3e\n          #{BRIEF}\n        \x3c/td\x3e\n      \x3c/tr\x3e\n\n      \x3ctr\x3e\n        \x3ctd\x3e\n          \x3ctable class=\"inner_table\"\x3e\n            \x3ctr\x3e\n              \x3ctd\x3e\n                譛蠕後↓繝代せ繝ｯ繝ｼ繝峨ｒ螟画峩縺励◆譌･譎ゑｼ喀n              \x3c/td\x3e\n              \x3ctd\x3e\n                #{LASTUPDATE}\n              \x3c/td\x3e\n            \x3c/tr\x3e\n            \x3ctr\x3e\n              \x3ctd\x3e\n                迴ｾ蝨ｨ縺ｮ繝代せ繝ｯ繝ｼ繝峨�譛牙柑譛滄剞�喀n              \x3c/td\x3e\n              \x3ctd\x3e\n                #{EXPIRATION_DATE}\n              \x3c/td\x3e\n            \x3c/tr\x3e\n            \x3ctr\x3e\n              \x3ctd\x3e\n                繝代せ繝ｯ繝ｼ繝峨�譛牙柑譛滄俣�喀n              \x3c/td\x3e\n              \x3ctd\x3e\n                #{LIFETIME}\n                譌･髢貼n              \x3c/td\x3e\n            \x3c/tr\x3e\n          \x3c/table\x3e\n        \x3c/td\x3e\n      \x3c/tr\x3e\n\n      \x3ctr\x3e\n        \x3ctd\x3e\n          \x3ctable class=\"inner_table\"\x3e\n            \x3ctr\x3e\n              \x3ctd width=\"190\"\x3e\n                迴ｾ蝨ｨ縺ｮ繝代せ繝ｯ繝ｼ繝噂n              \x3c/td\x3e\n              \x3ctd\x3e\n                \x3cinput type=\"password\" name=\"current_passwd\" id=\"current_passwd\" size=\"20\" value=\"\" autocomplete=\"off\" maxlength=\"255\" style=\"ime-mode: disabled;\" tabindex=\"1\"\x3e\n              \x3c/td\x3e\n            \x3c/tr\x3e\n            \x3ctr\x3e\n              \x3ctd width=\"190\"\x3e\n                譁ｰ縺励＞繝代せ繝ｯ繝ｼ繝噂n              \x3c/td\x3e\n              \x3ctd\x3e\n                \x3cinput type=\"password\" name=\"new_password\" id=\"new_password\" size=\"20\" value=\"\" autocomplete=\"off\" maxlength=\"255\" style=\"ime-mode: disabled;\" tabindex=\"2\"\x3e\n              \x3c/td\x3e\n            \x3c/tr\x3e\n            \x3ctr\x3e\n              \x3ctd width=\"190\"\x3e\n                #{CAPTION}\n              \x3c/td\x3e\n              \x3ctd\x3e\n                \x3cinput type=\"password\" name=\"check_password\" id=\"check_password\" size=\"20\" value=\"\" autocomplete=\"off\" maxlength=\"255\" style=\"ime-mode: disabled;\" tabindex=\"3\"\x3e\n              \x3c/td\x3e\n            \x3c/tr\x3e\n          \x3c/table\x3e\n          \x3cdiv id=\"div_mobilepassword\" style=\"display: #{DISPLAY}\"\x3e\n            \x3ctable class=\"inner_table\"\x3e\n              \x3ctr\x3e\n                \x3ctd width=\"190\"\x3e\n                  譁ｰ縺励＞繝｢繝舌う繝ｫ繝代せ繝ｯ繝ｼ繝噂n                \x3c/td\x3e\n                \x3ctd\x3e\n                  \x3cinput type=\"password\" name=\"new_mobilepassword\" id=\"new_mobilepassword\" size=\"20\" value=\"\" autocomplete=\"off\" maxlength=\"8\" style=\"ime-mode: disabled;\" tabindex=\"4\"\x3e\n                \x3c/td\x3e\n              \x3c/tr\x3e\n            \x3c/table\x3e\n          \x3c/div\x3e\n        \x3c/td\x3e\n      \x3c/tr\x3e\n\n    \x3c/table\x3e\n\n  \x3c/div\x3e\n\n  \x3cdiv class=\"pop_btn\"\x3e\n    \x3cbutton class=\"imgbtn\" onclick=\"javascript:changePassword();\" id=\"btn_chpasswd_ok\" name=\"btn_chpasswd_ok\" value=\"  OK  \" tabindex=\"5\"\x3e\n      \x3cimg src=\"https://pam.alpha-mail.ne.jp/am_viz/common/img/standard/btn/btn_apply.gif\"\x3e\n        OK  \n    \x3c/button\x3e\n\n    \x3cbutton class=\"imgbtn\" onclick=\"javascript:cancelChangePassword();\" id=\"btn_chpasswd_cancel\" name=\"btn_chpasswd_cancel\" value=\"繧ｭ繝｣繝ｳ繧ｻ繝ｫ\" tabindex=\"6\"\x3e\n      \x3cimg src=\"https://pam.alpha-mail.ne.jp/am_viz/common/img/standard/btn/btn_cancel.gif\"\x3e\n      繧ｭ繝｣繝ｳ繧ｻ繝ｫ\n    \x3c/button\x3e\n  \x3c/div\x3e\n\x3c/form\x3e\n";var errmsg='';function start(){if((auth_status!='0'||session_status!='0')&&errmsg!=''){if(is_allmap=='1'){amvpop.alert('繝ｭ繧ｰ繧､繝ｳ縺ｫ螟ｱ謨励＠縺ｾ縺励◆縲�<br>(繧ｻ繝�す繝ｧ繝ｳ繧ｨ繝ｩ繝ｼ)<br>['+errmsg.escapeHTMLText()+']');}else{amvpop.alert(errmsg.escapeHTMLText());}}else if(auth_status=='0'&&session_status=='0'){if(quota_status=='1'){check_quota=1;ammsg.info('LOGIN0050',{"$quota":80},move_home);}else if(quota_status=='2'){ammsg.info('LOGIN0050',{"$quota":90},move_home);check_quota=1;}else if(quota_status=='3'){check_quota=1;ammsg.info('LOGIN0060',null,move_home);}else{if(password_status=='1'){amvpop.closeWindow();ammsg.info("LOGIN0210",null,move_page_after_login);}else
+move_page_after_login();}}else if(auth_status=='0'&&session_status!='0'){amvpop.alert('繝ｭ繧ｰ繧､繝ｳ縺ｫ螟ｱ謨励＠縺ｾ縺励◆縲�<br>(繧ｻ繝�す繝ｧ繝ｳ繧ｨ繝ｩ繝ｼ) ['+session_status+']');}else{if(auth_status=='6'){ammsg.error('LOGIN0070',null,error_back);}
+else if(auth_status=='3'){ammsg.error('LOGIN0070',null,error_back);}
+else if(auth_status=='4'){ammsg.error('LOGIN0080',null,error_back);}
+else if(auth_status=='5'){ammsg.error('LOGIN0090',null,error_back);}
+else if(auth_status=='7'){ammsg.error('LOGIN0240',null,error_back);}
+else if(auth_status=='8'){ammsg.error('LOGIN0270',null,error_back);}
+else if(password_status=='2'){var passwd_policy_contain=new Array();passwd_policy_contain.push('alphal');displayChangePassword("","","0","regexp","limit","2",passwd_policy_contain,"8",false);}
+else if(password_status=='3'){if(("0")!='2'){ammsg.error("LOGIN0280",null,error_back);}else{ammsg.error("LOGIN0140",null,error_back);}
+displayChpasswdInit();}
+else if(password_status=='4'){ammsg.error("LOGIN0150",null,error_back);displayChpasswdInit();}
+else if(password_status=='5'){ammsg.error("LOGIN0160",null,error_back);displayChpasswdInit();}
+else if(password_status=='6'){ammsg.error("LOGIN0170",null,error_back);displayChpasswdInit();}
+else if(password_status=='7'){ammsg.error("LOGIN0180",null,error_back);displayChpasswdInit();}
+else if(password_status=='8'){ammsg.error("LOGIN0190",null,error_back);displayChpasswdInit();}
+else if(password_status=='9'){ammsg.error("LOGIN0300",{'$errors':''},error_back);displayChpasswdInit();}
+else if(password_status=='10'){ammsg.error("LOGIN0230",null,error_back);displayChpasswdInit();}
+else if(password_status=='11'){ammsg.error("LOGIN0200",null,error_back);displayChpasswdInit();}
+else if(password_status=='12'){ammsg.error("LOGIN0290",{'$errmsg':''},error_back);displayChpasswdInit();}
+else if(password_status=='13'){ammsg.error("LOGIN0220",null,error_back);displayChpasswdInit();}
+else if(password_status=='14'){ammsg.error('TOOL0710',{'$mobilepasswd_min':'1'},error_back);displayChpasswdInit();}
+else{ammsg.error('LOGIN0020',null,error_back);}}}
+//-->
+</script>
+
+
+</html>
